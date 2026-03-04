@@ -499,7 +499,7 @@ body p {
   display: none;
   margin-top: 32px;
 }
-.filters .filter:not(:last-child) {
+.filters .filter:not(:last-of-type) {
   margin-bottom: 12px;
 }
 .filters .filter__option:not(:last-child) {
@@ -589,6 +589,11 @@ body p {
   content: attr(data-hover-text);
   translate: -300%;
   transition: 0.5s;
+}
+@media (max-width: 767px) {
+  .filters__button-clear:before {
+    translate: -600%;
+  }
 }
 @media (hover: hover) {
   .filters__button-clear:hover span {
