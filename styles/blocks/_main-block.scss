@@ -149,6 +149,7 @@
                                 -100px center;
           transition: .4s;
           flex-basis: 30%;
+          pointer-events: none;
 
           @include mobile {
             width: 36px;

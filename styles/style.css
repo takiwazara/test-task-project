@@ -469,6 +469,7 @@ body p {
   background-position: center center, -100px center;
   transition: 0.4s;
   flex-basis: 30%;
+  pointer-events: none;
 }
 @media (max-width: 767px) {
   .main-block .cards-block .card__program-link::before {
