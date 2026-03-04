@@ -547,6 +547,11 @@ body p {
   border: none;
   border-radius: 32px;
 }
+@media (max-width: 767px) {
+  .filters__button-clear {
+    width: 100%;
+  }
+}
 .filters__button-clear:after {
   content: "";
   display: inline-block;
@@ -582,7 +587,7 @@ body p {
 .filters__button-clear:before {
   position: absolute;
   content: attr(data-hover-text);
-  translate: -150%;
+  translate: -300%;
   transition: 0.5s;
 }
 @media (hover: hover) {
