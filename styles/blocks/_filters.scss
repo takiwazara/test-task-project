@@ -1,4 +1,5 @@
 @use '../mixins' as *;
+@use '../media' as *;
 
 .filters {
   .filter {
@@ -80,9 +81,13 @@
       text-wrap: nowrap;
     }
 
-    &:hover::after {
-      background-position: 100px center,
-      center center;
+    & {
+      @include hover {
+        &::after {
+          background-position: 100px center,
+          center center;
+        }
+      }
     }
 
     &:active::after {
@@ -96,13 +101,21 @@
       transition: .5s;
     }
 
-    &:hover > span {
-      opacity: 0;
-      transition: .4s;
+    & {
+      @include hover {
+        span {
+          opacity: 0;
+          transition: .4s;
+        }
+      }
     }
 
-    &:hover::before {
-      translate: 0;
+    & {
+      @include hover {
+        &::before {
+          translate: 0;
+        }
+      }
     }
   }
 }

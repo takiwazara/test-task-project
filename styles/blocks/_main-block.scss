@@ -156,9 +156,13 @@
           }
         }
 
-        &:hover::before {
-          background-position: 100px center,
-                                center center;
+        & {
+          @include hover {
+            &::before {
+              background-position: 100px center,
+              center center;
+            }
+          }
         }
 
         &:active::after {

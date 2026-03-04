@@ -476,8 +476,15 @@ body p {
     height: 36px;
   }
 }
-.main-block .cards-block .card__program-link:hover::before {
-  background-position: 100px center, center center;
+@media (hover: hover) {
+  .main-block .cards-block .card__program-link:hover::before {
+    background-position: 100px center, center center;
+  }
+}
+@media (hover: none) {
+  .main-block .cards-block .card__program-link:active::before {
+    background-position: 100px center, center center;
+  }
 }
 .main-block .cards-block .card__program-link:active::after {
   background-color: var(--color-orange-dark);
@@ -559,8 +566,15 @@ body p {
 .filters__button-clear > span {
   text-wrap: nowrap;
 }
-.filters__button-clear:hover::after {
-  background-position: 100px center, center center;
+@media (hover: hover) {
+  .filters__button-clear:hover::after {
+    background-position: 100px center, center center;
+  }
+}
+@media (hover: none) {
+  .filters__button-clear:active::after {
+    background-position: 100px center, center center;
+  }
 }
 .filters__button-clear:active::after {
   background-color: var(--color-orange-dark);
@@ -571,12 +585,27 @@ body p {
   translate: -150%;
   transition: 0.5s;
 }
-.filters__button-clear:hover > span {
-  opacity: 0;
-  transition: 0.4s;
+@media (hover: hover) {
+  .filters__button-clear:hover span {
+    opacity: 0;
+    transition: 0.4s;
+  }
 }
-.filters__button-clear:hover::before {
-  translate: 0;
+@media (hover: none) {
+  .filters__button-clear:active span {
+    opacity: 0;
+    transition: 0.4s;
+  }
+}
+@media (hover: hover) {
+  .filters__button-clear:hover::before {
+    translate: 0;
+  }
+}
+@media (hover: none) {
+  .filters__button-clear:active::before {
+    translate: 0;
+  }
 }
 
 .filter__checkbox {
