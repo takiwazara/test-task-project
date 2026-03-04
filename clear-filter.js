@@ -1,7 +1,7 @@
 let checkboxList = document.querySelectorAll('.filter__checkbox')
 let clearButton = document.querySelector('.filters__button-clear')
 
-clearButton.addEventListener('click', function () {
+clearButton.addEventListener('click', function (event) {
   for (let i = 0; i <
   checkboxList.length;
   i++
