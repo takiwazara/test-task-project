@@ -1,11 +1,11 @@
 let checkboxList = document.querySelectorAll('.filter__checkbox')
 let clearButton = document.querySelector('.filters__button-clear')
 
-clearButton.addEventListener('click', function (){
+clearButton.addEventListener('click', function () {
   for (let i = 0; i <
   checkboxList.length;
-  i++
-) {
+       i++
+  ) {
     checkboxList[i].checked = false;
   }
 })

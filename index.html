@@ -146,7 +146,8 @@
         </form>
       </div>
 
-      <button class="filters__button-clear" data-hover-text="Подробнее"><span>Сбросить фильтры</span></button>
+      <button class="filters__button-clear" data-hover-text="Подробнее">
+        <span>Сбросить фильтры</span></button>
 
     </aside>
 
@@ -453,8 +454,13 @@
     </div>
 
     <section class="pagination">
-      <button class="pagination__page pagination__previous" id="page_previous"></button>
-      <button class="pagination__page pagination__active" id="page_1" data-page="1">1</button>
+      <button
+        class="pagination__page pagination__previous" id="page_previous"
+      ></button>
+      <button
+        class="pagination__page pagination__active" id="page_1" data-page="1"
+      >1
+      </button>
       <button class="pagination__page" id="page_2" data-page="2">2</button>
       <button class="pagination__page pagination__group">...</button>
       <button class="pagination__page" id="page_19" data-page="19">19</button>
@@ -464,13 +470,10 @@
 
   </section>
 
-
 </div>
 
-<script src="clear-filter.js" type="module"></script>
-<script src="filter-menu.js" type="module"></script>
-
-<!--version 1.0.1-->
+<script src="scripts/clear-filter.js" type="module"></script>
+<script src="scripts/filter-menu.js" type="module"></script>
 
 </body>
 </html>
