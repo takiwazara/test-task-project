@@ -1,4 +1,5 @@
 @use '../mixins' as *;
+@use '../media' as *;
 
 .filter {
   &__checkbox {
@@ -31,13 +32,26 @@
     background-position: center;
     border: 1px solid var(--color-purple);
   }
-  &__checkbox:checked + &__label:hover::before {
-    background-color: var(--color-orange);
-    border-color: var(--color-orange);
+
+  &__checkbox:checked + &__label {
+    @include hover {
+      &::before {
+        background-color: var(--color-orange);
+        border-color: var(--color-orange);
+      }
+    }
   }
-  &__checkbox:not(:checked) + &__label:hover::before {
-    background-color: var(--color-orange-light);
-    border: 1px solid var(--color-orange);
-    transition: .2s;
+
+  &__checkbox:not(:checked) + &__label {
+    @include hover {
+      &::before {
+        background-color: var(--color-orange-light);
+        border: 1px solid var(--color-orange);
+        transition: .2s;
+      }
+    }
+
+
+
   }
 }
