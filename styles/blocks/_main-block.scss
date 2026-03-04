@@ -1,0 +1,170 @@
+@use '../mixins' as *;
+@use '../media' as *;
+
+.main-block {
+
+  row-gap: 32px;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  grid-column-gap: 32px;
+
+  @include mobile {
+    grid-template-columns: 100%;
+  }
+
+  .cards-block {
+    &__card {
+      border-radius: 4px;
+      background-color: var(--color-element);
+      padding: 32px;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      &:hover .program__title {
+        color: var(--color-purple);
+      }
+    }
+
+    .card {
+      &__program-id {
+        & *:first-child {
+          margin-bottom: 12px;
+        }
+
+        margin-bottom: 64px;
+
+        .program__code {
+          @include text-small;
+
+          color: var(--color-font-alt);
+        }
+      }
+
+      &__program-info {
+
+        border-bottom: 1px solid var(--color-divider);
+
+
+        &--alt {
+          padding-top: 35px;
+
+        }
+
+        .program-info {
+          &__item {
+            padding-bottom: 40px;
+            @include mobile {
+              padding-bottom: 20px;
+              flex-basis: 45%;
+            }
+          }
+
+          &__list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            @include mobile {
+              justify-content: space-between;
+
+              gap: 6px;
+            };
+
+          }
+
+          &__hint {
+            @include text-small;
+
+            color: var(--color-font-alt);
+          }
+
+          &__text {
+            @include text-accent;
+
+            &--alt {
+              font-size: 16px;
+              line-height: 24px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+
+      &__program-info--alt {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .program-info__list--alt {
+          display: flex;
+          align-items: center;
+        }
+
+        .program-info__item--alt {
+
+          color: var(--color-font-alt);
+          height: max-content;
+
+          &:not(:first-child) {
+            display: inline-flex;
+            padding-left: 12px;
+            margin-left: 12px;
+
+            border-left: 2px solid var(--color-divider);
+
+            @include mobile {
+              margin-left: 5px;
+              padding-left: 5px;
+            }
+          }
+
+          & * {
+            @include text-small;
+          }
+        }
+      }
+
+      &__program-link {
+        display: flex;
+        position: relative;
+        width: 50px;
+        height: 50px;
+
+
+        &::before {
+          content: '';
+          display: flex;
+          position: absolute;
+          border-radius: 50%;
+          width: 44px;
+          height: 44px;
+          top: 10px;
+          background-color: var(--color-orange);
+          background-image: url("../images/button-arrow-icon.svg"), url("../images/button-arrow-icon.svg");
+          background-repeat: no-repeat;
+          background-position: center center,
+                                -100px center;
+          transition: .4s;
+          flex-basis: 30%;
+
+          @include mobile {
+            width: 36px;
+            height: 36px;
+          }
+        }
+
+        &:hover::before {
+          background-position: 100px center,
+                                center center;
+        }
+
+        &:active::after {
+          background-color: var(--color-orange-dark);
+        }
+      }
+    }
+  }
+}

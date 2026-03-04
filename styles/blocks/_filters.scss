@@ -1,0 +1,108 @@
+@use '../mixins' as *;
+
+.filters {
+  .filter {
+    background-color: var(--color-element);
+    border-radius: 4px;
+    padding: 32px;
+
+    &__options {
+      display: none;
+      margin-top: 32px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &__option:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    .menu {
+
+      &__checkbox {
+        @include visually-hidden;
+      }
+
+      &__label {
+        @include no-select;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        white-space: nowrap;
+      }
+
+      &__icon {
+        background: url("../images/menu-arrow-icon.svg") no-repeat;
+        translate: 0 30%;
+        width: 10px;
+        height: 10px;
+        transition: .2s;
+        margin-inline: 10px;
+      }
+    }
+  }
+
+  &__button-clear {
+    overflow: hidden;
+    position: relative;
+    height: 52px;
+    margin-top: 32px;
+    padding: 15px;
+    padding-right: 80px;
+    background-color: var(--color-element);
+    border: none;
+    border-radius: 32px;
+
+
+    &:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      top: 4px;
+      right: 4px;
+      border-radius: 50%;
+      background-color: var(--color-orange);
+      background-image: url("../images/clear-filter-icon.svg"), url("../images/clear-filter-icon.svg");
+      background-repeat: no-repeat;
+      background-position: center center,
+      -100px center;
+      pointer-events: none;
+      transition: .5s;
+    }
+
+    & > span {
+      text-wrap: nowrap;
+    }
+
+    &:hover::after {
+      background-position: 100px center,
+      center center;
+    }
+
+    &:active::after {
+      background-color: var(--color-orange-dark);
+    }
+
+    &:before {
+      position: absolute;
+      content: attr(data-hover-text);
+      translate: -150%;
+      transition: .5s;
+    }
+
+    &:hover > span {
+      opacity: 0;
+      transition: .4s;
+    }
+
+    &:hover::before {
+      translate: 0;
+    }
+  }
+}

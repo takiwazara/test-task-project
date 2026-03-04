@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Document</title>
+</head>
+<body>
+
+<div class="body__inner">
+  <h1>Программы подготовки</h1>
+
+  <section class="search-block">
+    <div class="search-block__icon"></div>
+    <input
+      type="text"
+      name="search"
+      id="search"
+      class="search-block__search"
+      placeholder=" "
+      required
+    >
+    <label for="search" class="search-block__placeholder">Поиск</label>
+  </section>
+
+  <section class="main-block">
+    <aside class="filters">
+      <div class="filter">
+        <div class="menu">
+          <input
+            class="menu__checkbox"
+            id="education-base-menu"
+            type="checkbox"
+          >
+          <label class="menu__label" for="education-base-menu">
+            <p class="menu__title">Уровень образования</p>
+            <div class="menu__icon"></div>
+          </label>
+        </div>
+        <form class="filter__options" action="">
+          <div class="filter__option">
+            <input
+              class="filter__checkbox"
+              type="checkbox"
+              id="education-base"
+            >
+            <label
+              class="filter__label" for="education-base"
+              data-base-level="nine-classes"
+            >9 классов
+            </label>
+          </div>
+          <div class="filter__option">
+            <input
+              class="filter__checkbox"
+              type="checkbox"
+              id="11_classes"
+            >
+            <label class="filter__label" for="11_classes">11 классов</label>
+          </div>
+        </form>
+      </div>
+
+      <div class="filter">
+        <div class="menu">
+          <input
+            class="menu__checkbox"
+            id="education-form-menu"
+            type="checkbox"
+          >
+          <label class="menu__label" for="education-form-menu">
+            <p class="menu__title">Форма обучения</p>
+            <div class="menu__icon"></div>
+          </label>
+        </div>
+        <form class="filter__options" action="">
+          <div class="filter__option">
+            <input
+              class="filter__checkbox"
+              type="checkbox"
+              id="full_time"
+            >
+            <label class="filter__label" for="full_time">Очная</label>
+          </div>
+          <div class="filter__option">
+            <input
+              class="filter__checkbox"
+              type="checkbox"
+              id="distance"
+            >
+            <label class="filter__label" for="distance">Заочная</label>
+          </div>
+        </form>
+      </div>
+
+      <div class="filter">
+        <div class="menu">
+          <input
+            class="menu__checkbox"
+            id="city-form-menu"
+            type="checkbox"
+          >
+          <label class="menu__label" for="city-form-menu">
+            <p class="menu__title">Город</p>
+            <div class="menu__icon"></div>
+          </label>
+        </div>
+        <form class="filter__options" action="">
+          <div class="filter__option">
+            <input
+              class="filter__checkbox"
+              type="checkbox"
+              id="Tomsk"
+            >
+            <label class="filter__label" for="Tomsk">Томск</label>
+          </div>
+          <div class="filter__option">
+            <input
+              class="filter__checkbox"
+              type="checkbox"
+              id="Moscow"
+            >
+            <label class="filter__label" for="Moscow">Москва</label>
+          </div>
+          <div class="filter__option">
+            <input
+              class="filter__checkbox"
+              type="checkbox"
+              id="SPB"
+            >
+            <label class="filter__label" for="SPB">Санкт-Петербург</label>
+          </div>
+          <div class="filter__option">
+            <input
+              class="filter__checkbox"
+              type="checkbox"
+              id="Sochi"
+            >
+            <label class="filter__label" for="Sochi">Сочи</label>
+          </div>
+        </form>
+      </div>
+
+      <button class="filters__button-clear" data-hover-text="Подробнее"><span>Сбросить фильтры</span></button>
+
+    </aside>
+
+    <div class="cards-block">
+      <div class="cards-block__card">
+        <div class="card__inner">
+          <div class="card__program-id">
+            <p class="program__code">09.02.07</p>
+            <h2
+              class="program__title"
+            >Информационные системы и программирование
+            </h2>
+          </div>
+          <div class="card__program-info">
+            <ul class="program-info__list">
+              <li class="program-info__item">
+                <p class="program-info__hint">Бюджетных мест</p>
+                <p class="program-info__text" id="budget">15</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Платных мест</p>
+                <p class="program-info__text" id="paid">35</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Форма обучения</p>
+                <p class="program-info__text" id="education-form">очная</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Срок обучения</p>
+                <p class="program-info__text" id="education-period">3 <span
+                  class="program-info__text--alt"
+                >года</span> 10 <span
+                  class="program-info__text--alt"
+                >месяцев</span></p>
+              </li>
+            </ul>
+          </div>
+          <div class="card__program-info--alt">
+            <ul class="program-info__list--alt">
+              <li class="program-info__item--alt">
+                <p class="program-info__education-level">СПО</p>
+              </li>
+              <li class="program-info__item--alt">
+                <p class="program-info__education-base">На базе 9 классов</p>
+              </li>
+              <li class="program-info__item--alt hidden">
+                <p class="program-info__city">Москва</p>
+              </li>
+            </ul>
+            <a href="#" class="card__program-link"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-block__card">
+        <div class="card__inner">
+          <div class="card__program-id">
+            <p class="program__code">09.02.07</p>
+            <h2
+              class="program__title"
+            >Эксплуатация беспилотных авиационных систем
+            </h2>
+          </div>
+          <div class="card__program-info">
+            <ul class="program-info__list">
+              <li class="program-info__item">
+                <p class="program-info__hint">Бюджетных мест</p>
+                <p class="program-info__text" id="budget">12</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Платных мест</p>
+                <p class="program-info__text" id="paid">13</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Форма обучения</p>
+                <p class="program-info__text" id="education-form">очная</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Срок обучения</p>
+                <p class="program-info__text" id="education-period">3 <span
+                  class="program-info__text--alt"
+                >года</span> 10 <span
+                  class="program-info__text--alt"
+                >месяцев</span></p>
+              </li>
+            </ul>
+          </div>
+          <div class="card__program-info--alt">
+            <ul class="program-info__list--alt">
+              <li class="program-info__item--alt">
+                <p class="program-info__education-level">СПО</p>
+              </li>
+              <li class="program-info__item--alt">
+                <p class="program-info__education-base">На базе 9 классов</p>
+              </li>
+              <li class="program-info__item--alt">
+                <p class="program-info__city">Москва</p>
+              </li>
+            </ul>
+            <a href="#" class="card__program-link"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-block__card">
+        <div class="card__inner">
+          <div class="card__program-id">
+            <p class="program__code">09.02.07</p>
+            <h2
+              class="program__title"
+            >Эксплуатация беспилотных авиационных систем
+            </h2>
+          </div>
+          <div class="card__program-info">
+            <ul class="program-info__list">
+              <li class="program-info__item">
+                <p class="program-info__hint">Бюджетных мест</p>
+                <p class="program-info__text" id="budget">12</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Платных мест</p>
+                <p class="program-info__text" id="paid">13</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Форма обучения</p>
+                <p class="program-info__text" id="education-form">очная</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Срок обучения</p>
+                <p class="program-info__text" id="education-period">3 <span
+                  class="program-info__text--alt"
+                >года</span> 10 <span
+                  class="program-info__text--alt"
+                >месяцев</span></p>
+              </li>
+            </ul>
+          </div>
+          <div class="card__program-info--alt">
+            <ul class="program-info__list--alt">
+              <li class="program-info__item--alt">
+                <p class="program-info__education-level">СПО</p>
+              </li>
+              <li class="program-info__item--alt">
+                <p class="program-info__education-base">На базе 9 классов</p>
+              </li>
+              <li class="program-info__item--alt">
+                <p class="program-info__city">Москва</p>
+              </li>
+            </ul>
+            <a href="#" class="card__program-link"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-block__card">
+        <div class="card__inner">
+          <div class="card__program-id">
+            <p class="program__code">09.02.07</p>
+            <h2
+              class="program__title"
+            >Информационные системы и программирование
+            </h2>
+          </div>
+          <div class="card__program-info">
+            <ul class="program-info__list">
+              <li class="program-info__item">
+                <p class="program-info__hint">Бюджетных мест</p>
+                <p class="program-info__text" id="budget">15</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Платных мест</p>
+                <p class="program-info__text" id="paid">35</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Форма обучения</p>
+                <p class="program-info__text" id="education-form">очная</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Срок обучения</p>
+                <p class="program-info__text" id="education-period">3 <span
+                  class="program-info__text--alt"
+                >года</span> 10 <span
+                  class="program-info__text--alt"
+                >месяцев</span></p>
+              </li>
+            </ul>
+          </div>
+          <div class="card__program-info--alt">
+            <ul class="program-info__list--alt">
+              <li class="program-info__item--alt">
+                <p class="program-info__education-level">СПО</p>
+              </li>
+              <li class="program-info__item--alt">
+                <p class="program-info__education-base">На базе 9 классов</p>
+              </li>
+              <li class="program-info__item--alt hidden">
+                <p class="program-info__city">Москва</p>
+              </li>
+            </ul>
+            <a href="#" class="card__program-link"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-block__card">
+        <div class="card__inner">
+          <div class="card__program-id">
+            <p class="program__code">09.02.07</p>
+            <h2
+              class="program__title"
+            >Эксплуатация беспилотных авиационных систем
+            </h2>
+          </div>
+          <div class="card__program-info">
+            <ul class="program-info__list">
+              <li class="program-info__item">
+                <p class="program-info__hint">Бюджетных мест</p>
+                <p class="program-info__text" id="budget">12</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Платных мест</p>
+                <p class="program-info__text" id="paid">13</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Форма обучения</p>
+                <p class="program-info__text" id="education-form">очная</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Срок обучения</p>
+                <p class="program-info__text" id="education-period">3 <span
+                  class="program-info__text--alt"
+                >года</span> 10 <span
+                  class="program-info__text--alt"
+                >месяцев</span></p>
+              </li>
+            </ul>
+          </div>
+          <div class="card__program-info--alt">
+            <ul class="program-info__list--alt">
+              <li class="program-info__item--alt">
+                <p class="program-info__education-level">СПО</p>
+              </li>
+              <li class="program-info__item--alt">
+                <p class="program-info__education-base">На базе 9 классов</p>
+              </li>
+              <li class="program-info__item--alt">
+                <p class="program-info__city">Москва</p>
+              </li>
+            </ul>
+            <a href="#" class="card__program-link"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-block__card">
+        <div class="card__inner">
+          <div class="card__program-id">
+            <p class="program__code">09.02.07</p>
+            <h2
+              class="program__title"
+            >Эксплуатация беспилотных авиационных систем
+            </h2>
+          </div>
+          <div class="card__program-info">
+            <ul class="program-info__list">
+              <li class="program-info__item">
+                <p class="program-info__hint">Бюджетных мест</p>
+                <p class="program-info__text" id="budget">12</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Платных мест</p>
+                <p class="program-info__text" id="paid">13</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Форма обучения</p>
+                <p class="program-info__text" id="education-form">очная</p>
+              </li>
+              <li class="program-info__item">
+                <p class="program-info__hint">Срок обучения</p>
+                <p class="program-info__text" id="education-period">3 <span
+                  class="program-info__text--alt"
+                >года</span> 10 <span
+                  class="program-info__text--alt"
+                >месяцев</span></p>
+              </li>
+            </ul>
+          </div>
+          <div class="card__program-info--alt">
+            <ul class="program-info__list--alt">
+              <li class="program-info__item--alt">
+                <p class="program-info__education-level">СПО</p>
+              </li>
+              <li class="program-info__item--alt">
+                <p class="program-info__education-base">На базе 9 классов</p>
+              </li>
+              <li class="program-info__item--alt">
+                <p class="program-info__city">Москва</p>
+              </li>
+            </ul>
+            <a href="#" class="card__program-link"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="pagination">
+      <button class="pagination__page pagination__previous" id="page_previous"></button>
+      <button class="pagination__page pagination__active" id="page_1" data-page="1">1</button>
+      <button class="pagination__page" id="page_2" data-page="2">2</button>
+      <button class="pagination__page pagination__group">...</button>
+      <button class="pagination__page" id="page_19" data-page="19">19</button>
+      <button class="pagination__page" id="page_20" data-page="20">20</button>
+      <button class="pagination__page pagination__next" id="page_next"></button>
+    </section>
+
+  </section>
+
+
+</div>
+
+<script src="filter-menu.js"></script>
+
+</body>
+</html>

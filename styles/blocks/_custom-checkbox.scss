@@ -1,0 +1,43 @@
+@use '../mixins' as *;
+
+.filter {
+  &__checkbox {
+    @include visually-hidden;
+  }
+
+  &__label {
+    @include no-select;
+
+    display: inline-flex;
+
+
+    &::before {
+      content: '';
+      display: inherit;
+      width: 24px;
+      height: 24px;
+      border: 1px solid var(--color-purple);
+      background-color: var(--color-element);
+      border-radius: 4px;
+      margin-right: 10px;
+      transition: .2s;
+    }
+  }
+
+  &__checkbox:checked + &__label::before {
+    content: '';
+    background: url("../images/checked-icon.svg") no-repeat;
+    background-color: var(--color-purple);
+    background-position: center;
+    border: 1px solid var(--color-purple);
+  }
+  &__checkbox:checked + &__label:hover::before {
+    background-color: var(--color-orange);
+    border-color: var(--color-orange);
+  }
+  &__checkbox:not(:checked) + &__label:hover::before {
+    background-color: var(--color-orange-light);
+    border: 1px solid var(--color-orange);
+    transition: .2s;
+  }
+}
